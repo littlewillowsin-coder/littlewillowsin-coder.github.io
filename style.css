@@ -442,7 +442,6 @@ footer {
 
 .footer-logo img {
   height: 60px;
-  filter: brightness(0) invert(1);
   margin: 0;
 }
 
