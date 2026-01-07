@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Little Willows Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 25px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--soft-green);
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .submit-btn {
+      background: var(--soft-green);
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .submit-btn:hover {
+      background: #8ac6a6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .contact-info-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .contact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      margin-top: 40px;
+      height: 450px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .building-image {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 50px;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Little Willows Academy" class="logo-img">
+        <div class="logo-text">Little Willows Academy</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="campus-life.html">Campus Life</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Let's Connect</h1>
+      <p>We'd love to hear from you. Whether you have questions, want to schedule a visit, or just want to chat about early education—we're here.</p>
+    </div>
+  </section>
+
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <h2>Our Campus in Thodupuzha</h2>
+      <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Nestled in the beautiful landscapes of Kerala, our campus provides a safe and nurturing environment</p>
+      
+      <img src="images/building.png" alt="Little Willows Academy Building" class="building-image">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
+        <div class="contact-info-card">
+          <div class="contact-icon">📍</div>
+          <h3 style="color: #2c5e4a;">Visit Us</h3>
+          <p><strong>Little Willows Academy</strong><br>
+          Vengalloor-Mangattukavala Bypass<br>
+          Thodupuzha - Ezhalloor Rd<br>
+          Nearby Popular Vehicles and Services<br>
+          Thodupuzha, Kerala 685605</p>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-icon">📞</div>
+          <h3 style="color: #2c5e4a;">Call Us</h3>
+          <p><strong>Phone:</strong> 082816 22127<br><br>
+          <strong>Hours:</strong><br>
+          Mon-Fri: 9:00 AM - 5:00 PM<br>
+          Saturday: 10:00 AM - 2:00 PM</p>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-icon">🌐</div>
+          <h3 style="color: #2c5e4a;">Online</h3>
+          <p><strong>Email:</strong> info@littlewillows.in<br>
+          <strong>Website:</strong> www.littlewillows.in<br><br>
+          We respond within 24 hours</p>
+        </div>
+      </div>
+
+      <h2>Send Us a Message</h2>
+      <p class="text-center" style="max-width: 700px; margin: 0 auto 40px;">Fill out the form below and we'll get back to you as soon as possible</p>
+
+      <!-- Email integration using Formspree - replace YOUR_FORM_ID with actual Formspree ID -->
+      <!-- Alternative: Use action="send_email.php" for PHP backend -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New contact form submission from Little Willows website">
+        <input type="hidden" name="_cc" value="info@littlewillows.in">
+        
+        <div class="form-group">
+          <label for="name">Parent/Guardian Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="082816 22127">
+        </div>
+
+        <div class="form-group">
+          <label for="child-name">Child's Name</label>
+          <input type="text" id="child-name" name="child_name" placeholder="Child's full name">
+        </div>
+
+        <div class="form-group">
+          <label for="child-age">Child's Age</label>
+          <input type="text" id="child-age" name="child_age" placeholder="e.g., 2.5 years">
+        </div>
+
+        <div class="form-group">
+          <label for="program">Program of Interest</label>
+          <select id="program" name="program">
+            <option value="">Select a program</option>
+            <option value="explorers">Playgroup - The Explorers (1.5-3 Years)</option>
+            <option value="investigators">Nursery - The Investigators (3-4 Years)</option>
+            <option value="creators">Pre-Primary I - The Creators (3.5-4.5 Years)</option>
+            <option value="graduates">Pre-Primary II - The Graduates (4.5-5.5 Years)</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry-type">What would you like to know about?</label>
+          <select id="inquiry-type" name="inquiry_type">
+            <option value="">Select inquiry type</option>
+            <option value="campus-tour">Schedule a Campus Tour</option>
+            <option value="admissions">Admissions Process</option>
+            <option value="programs">Program Details</option>
+            <option value="fees">Fee Structure</option>
+            <option value="curriculum">Curriculum & Philosophy</option>
+            <option value="other">Other Questions</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell us what's on your mind..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="consent" required style="width: auto; margin-right: 10px;">
+            I agree to receive communications from Little Willows Academy
+          </label>
+        </div>
+
+        <div style="text-align: center;">
+          <button type="submit" class="submit-btn">Send Message</button>
+        </div>
+      </form>
+
+      <div class="map-container">
+        <!-- Google Maps embed for Thodupuzha, Kerala -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3930.2971077319485!2d76.7220833!3d9.9091944!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNTQnMzMuMSJOIDc2wrA0MycxOS41IkU!5e0!3m2!1sen!2sin!4v1767786938613!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, var(--pastel-blue), var(--light-green)); padding: 80px 0;">
+    <div class="container">
+      <h2 style="color: #2c5e4a;">Visiting Hours</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial" style="font-style: normal; background: white;">
+          <h3 style="color: #2c5e4a;">🏫 Campus Tours</h3>
+          <p><strong>Monday - Friday</strong><br>
+          10:00 AM, 12:00 PM, 3:00 PM<br>
+          <em>Pre-booking required</em></p>
+        </div>
+        <div class="testimonial" style="font-style: normal; background: white;">
+          <h3 style="color: #2c5e4a;">📞 Office Hours</h3>
+          <p><strong>Monday - Friday</strong><br>
+          9:00 AM - 5:00 PM<br>
+          <strong>Saturday</strong><br>
+          10:00 AM - 2:00 PM</p>
+        </div>
+        <div class="testimonial" style="font-style: normal; background: white;">
+          <h3 style="color: #2c5e4a;">🎉 Open House</h3>
+          <p><strong>First Saturday</strong><br>
+          Every month<br>
+          10:00 AM - 1:00 PM<br>
+          <em>Drop in anytime!</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <h2>Directions & Parking</h2>
+      <div class="program-card">
+        <h3>🚗 By Car</h3>
+        <p>We're located on Vengalloor-Mangattukavala Bypass, near Thodupuzha - Ezhalloor Road. Look for the signboard near Popular Vehicles and Services. Ample parking available on campus.</p>
+      </div>
+
+      <div class="program-card">
+        <h3>🚌 By Public Transport</h3>
+        <p>Regular bus services connect Thodupuzha to major towns. The school is accessible from the main road. Auto-rickshaws and taxis are readily available.</p>
+      </div>
+
+      <div class="program-card">
+        <h3>🅿️ Parking Information</h3>
+        <p>Free parking for visitors. Designated spots near the main entrance for drop-off/pick-up during school hours. Please follow the staff's instructions for safe parking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Still Have Questions?</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 30px;">Don't hesitate to reach out. We're always happy to help!</p>
+      <a href="tel:08281622127" class="btn" style="background:white;color:var(--accent)">Call Us Now</a>
+      <a href="#" class="btn" style="background:#2c5e4a;">Download Brochure</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Little Willows Academy">
+            <h3>Little Willows Academy</h3>
+          </div>
+          <p>Nurturing young minds with care, creativity, and developmental science.</p>
+          <div class="social-links">
+            <a href="#" title="Facebook">📘</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="YouTube">🎥</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="campus-life.html">Campus Life</a></li>
+            <li><a href="philosophy.html">Philosophy</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Programs</h3>
+          <ul class="footer-links">
+            <li><a href="programs.html#explorers">Playgroup (1.5-3 Years)</a></li>
+            <li><a href="programs.html#investigators">Nursery (3-4 Years)</a></li>
+            <li><a href="programs.html#creators">Pre-Primary I (3.5-4.5 Years)</a></li>
+            <li><a href="programs.html#graduates">Pre-Primary II (4.5-5.5 Years)</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li>📍 Vengalloor-Mangattukavala Bypass, Thodupuzha, Kerala 685605</li>
+            <li>📞 082816 22127</li>
+            <li>📧 info@littlewillows.in</li>
+            <li>⏰ Mon-Fri: 9:00 AM - 2:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Little Willows Academy. All rights reserved. | <a href="#" style="color: inherit;">Privacy Policy</a> | <a href="#" style="color: inherit;">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
