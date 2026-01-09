@@ -7,25 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <div class="container header-content">
-      <div class="logo-container">
-        <img src="images/logo.png" alt="Little Willows Academy" class="logo-img">
-        <div class="logo-text">Little Willows Academy</div>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="programs.html">Programs</a>
-        <a href="campus-life.html">Campus Life</a>
-        <a href="philosophy.html">Philosophy</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="container header-content">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Little Willows Academy" class="logo-img">
+      <div class="logo-text">Little Willows Academy</div>
     </div>
-  </header>
-
-  <section class="hero">
+    <button class="mobile-menu-toggle">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="programs.html">Programs</a>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-menu-overlay"></div>
+  </div>
+</header>  <section class="hero">
     <div class="container">
       <h1>A vibrant, theme-based sanctuary<br>where curiosity is the compass</h1>
       <p>At Little Willows Academy, early learning isn't about rigid routines or early pressure—it's about wonder, warmth, and the gentle unfolding of a child's potential.</p>
@@ -116,10 +115,50 @@
     </div>
   </section>
 
+<!-- LEARNING THAT FEELS LIKE PLAY -->
+<section style="padding: 90px 0; background:#ffffff;">
+  <div class="container learning-play-block">
+
+    <!-- TEXT CONTENT -->
+    <div class="learning-text">
+      <h2>
+        Learning That Feels Like <strong>Play</strong>,<br>
+        <span class="highlight">Growth That Feels Like Joy</span>
+      </h2>
+
+      <p>
+        We’ve reimagined early education not as preparation for life—but as a meaningful part of it.
+        Here, learning happens through storytelling under fairy lights, counting shells at the sand table,
+        singing rhythms in the music space, and resolving conflicts during snack time.
+      </p>
+
+      <p>
+        Every interaction is a teaching moment. Every space is a quiet invitation to explore.
+      </p>
+
+      <p class="closing">
+        At Little Willows, childhood is not rushed. It is savoured—slowly, joyfully,
+        and with deep respect for each child’s unique rhythm.
+      </p>
+    </div>
+
+    <!-- IMAGE COLLAGE -->
+    <div class="learning-image">
+      <img 
+        src="images/kerala-learning-collage.jpg"
+        alt="Learning through play and joy at Little Willows"
+      >
+    </div>
+
+  </div>
+</section>
+
+
+
+
   <section class="rhythm fade-in">
     <div class="container">
-      <h2>Learning That Feels Like Play,<br>Growth That Feels Like Joy</h2>
-      <p class="text-center">We've reimagined early education not as preparation for life—but as a meaningful part of it.</p>
+      <h2>Rhythm, Routine & Joy:A Typical Day ! <br> Designed for Wonder </h2>
       <div class="timeline">
         <div class="time-slot">
           <div class="time">⏰ 9:30 AM</div>
@@ -262,6 +301,31 @@
       </div>
     </div>
   </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const nav = document.querySelector("nav");
+  const overlay = document.querySelector(".mobile-menu-overlay");
+
+  if (!menuToggle || !nav) return;
+
+  menuToggle.addEventListener("click", function () {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    if (overlay) overlay.classList.toggle("active");
+  });
+
+  if (overlay) {
+    overlay.addEventListener("click", function () {
+      menuToggle.classList.remove("active");
+      nav.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  }
+});
+</script>
 
 </body>
 </html>
